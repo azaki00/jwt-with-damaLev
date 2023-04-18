@@ -6,7 +6,6 @@ const app = express();
 // app.use(json.cors());
 
 app.use(express.json());
-
 let refreshTokens= [];
 
 const users = [
