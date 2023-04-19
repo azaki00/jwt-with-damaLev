@@ -4,6 +4,7 @@ const cors = require('cors');
 var bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const authRoutes = require('./routes/AuthRoutes');
 var app = express();
 
 // 
@@ -16,7 +17,8 @@ app.use(
 );
 app.use(cookieParser())
 app.use(express.json());
-app.use("/",AuthRoutes);
+app.use("/",authRoutes);
+
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -32,6 +34,6 @@ db.connect((error => {
     }
 }))
 
-app.listen(4000, '0.0.0.0', () => {
+app.listen(4000, () => {
     console.log('Server is running on http://localhost:4000');
 })

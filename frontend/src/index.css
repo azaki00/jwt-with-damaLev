@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e7e7e7;
+  background-color: whitesmoke;
   overflow: hidden;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
